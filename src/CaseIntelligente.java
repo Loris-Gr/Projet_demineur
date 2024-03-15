@@ -25,12 +25,9 @@ public class CaseIntelligente extends Case {
         if (estMarquee) {
             return "?";
         }
-
-        else {
-            if (contientUneBombe) {
-                return "@"
-            }
+        //else
+        if (contientUneBombe) {
+            return "@";
         }
     }
-    
 }
