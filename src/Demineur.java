@@ -1,6 +1,18 @@
 import java.util.Scanner;
 
 public class Demineur extends Plateau{
+    private int nbLignes ;
+    private int nbColonnes ;
+    private int pourcentageDeBombes ;
+    private int nbBombes ;
+
+
+    public Demineur(int nbLignes, int nbColonnes, int pourcentage, int nbBombes) {
+        this.nbLignes = nbLignes;
+        this.nbColonnes = nbColonnes;
+        this.pourcentageDeBombes = pourcentage;
+        this.nbBombes = nbBombes;
+    }
 
 
     public void affiche(){
