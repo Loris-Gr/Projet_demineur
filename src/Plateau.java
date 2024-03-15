@@ -4,6 +4,37 @@ import java.util.Random;
 
 public class Plateau{
 
+    private int nbLignes ;
+    private int nbColonnes ;
+    private int pourcentageDeBombes ;
+    private int nbBombes ;
+
+    public Plateau(int nbLignes, int nbColonnes, int pourcentage, int nbBombes) {
+        this.nbLignes = nbLignes;
+        this.nbColonnes = nbColonnes;
+        this.pourcentageDeBombes = pourcentage;
+        this.nbBombes = nbBombes;
+    }
+
+    public int getNbLignes() {
+        return this.nbLignes;
+    }
+
+    public int getNbColonnes() {
+        return this.nbColonnes;
+    }
+
+    public int getPourcentageDeBombes() {
+        return this.pourcentageDeBombes;
+    }
+
+    public int getNbTotalBombes() {
+        return this.nbBombes;
+    }
+
+    public CaseIntelligente getCase(int numLigne, int numColonne) {
+        
+    }
 
     protected void poseDesBombesAleatoirement(){
         Random generateur = new Random();
