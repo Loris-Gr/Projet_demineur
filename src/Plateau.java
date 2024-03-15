@@ -16,7 +16,14 @@ public class Plateau{
     }
 
     private void creerLesCasesVides() {
+        this.lePlateau = new ArrayList<>();
+        for (int i=0; i < nbLignes; i++) {
+            List<Case> listeEnCours = new ArrayList<>() ;
+            for (int j=0; j < nbLignes; j++){
+                    
 
+            }
+        }
     }
 
     private void rendLesIntelligentes() {
