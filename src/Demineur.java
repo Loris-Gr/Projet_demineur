@@ -11,7 +11,27 @@ public class Demineur extends Plateau{
     }
 
     public int getScore() {
-        return score;
+        return this.score;
+    }
+
+    public void reveler(int x, int y) {
+
+    }
+
+    public void marquer(int x, int y) {
+
+    }
+
+    public boolean estGagnee() {
+        return false;
+    }
+
+    public boolean estPerdue() {
+        return false;
+    }
+
+    public void reset() {
+
     }
 
     public void affiche(){
