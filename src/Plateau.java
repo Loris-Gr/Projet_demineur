@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Plateau{
-
     private int nbLignes ;
     private int nbColonnes ;
     private int pourcentageDeBombes ;
@@ -33,6 +32,18 @@ public class Plateau{
     }
 
     public CaseIntelligente getCase(int numLigne, int numColonne) {
+        return null;
+    }
+
+    public int getNbCasesMarquees() {
+        return 0;
+    }
+
+    public void poseBombe(int x, int y) {
+
+    }
+
+    public void reset() {
         
     }
 
