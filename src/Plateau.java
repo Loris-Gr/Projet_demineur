@@ -8,11 +8,10 @@ public class Plateau{
     private int pourcentageDeBombes ;
     private int nbBombes ;
 
-    public Plateau(int nbLignes, int nbColonnes, int pourcentage, int nbBombes) {
+    public Plateau(int nbLignes, int nbColonnes, int pourcentage) {
         this.nbLignes = nbLignes;
         this.nbColonnes = nbColonnes;
         this.pourcentageDeBombes = pourcentage;
-        this.nbBombes = nbBombes;
     }
 
     public int getNbLignes() {
@@ -44,7 +43,7 @@ public class Plateau{
     }
 
     public void reset() {
-        
+
     }
 
     protected void poseDesBombesAleatoirement(){
