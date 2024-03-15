@@ -6,7 +6,6 @@ public class Demineur extends Plateau{
     private int pourcentageDeBombes ;
     private int nbBombes ;
 
-
     public Demineur(int nbLignes, int nbColonnes, int pourcentage, int nbBombes) {
         this.nbLignes = nbLignes;
         this.nbColonnes = nbColonnes;
@@ -14,6 +13,21 @@ public class Demineur extends Plateau{
         this.nbBombes = nbBombes;
     }
 
+    public int getNbLignes() {
+        return this.nbLignes;
+    }
+
+    public int getNbColonnes() {
+        return this.nbColonnes;
+    }
+
+    public int getPourcentageDeBombes() {
+        return this.pourcentageDeBombes;
+    }
+
+    public int getNbTotalBombes() {
+        return this.nbBombes;
+    }
 
     public void affiche(){
         System.out.println("JEU DU DEMINEUR");
