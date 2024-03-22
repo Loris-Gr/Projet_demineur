@@ -7,7 +7,7 @@ public class Plateau{
     private int nbColonnes ;
     private int pourcentageDeBombes ;
     private int nbBombes ;
-    private List<CaseIntelligente> lePlateau;
+    private List<List<CaseIntelligente>> lePlateau;
 
     public Plateau(int nbLignes, int nbColonnes, int pourcentage) {
         this.nbLignes = nbLignes;
@@ -18,15 +18,15 @@ public class Plateau{
     private void creerLesCasesVides() {
         this.lePlateau = new ArrayList<>();
         for (int i=0; i < nbLignes; i++) {
-            List<Case> listeEnCours = new ArrayList<>() ;
+            List<CaseIntelligente> listeEnCours = new ArrayList<>() ;
             for (int j=0; j < nbLignes; j++){
-                    
-
+                listeEnCours.add(new CaseIntelligente());                   
             }
+            this.lePlateau.add(listeEnCours);
         }
     }
 
-    private void rendLesIntelligentes() {
+    private void rendLesCasesIntelligentes() {
         
     }
 
