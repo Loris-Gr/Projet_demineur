@@ -1,16 +1,18 @@
+import java.util.List;
+import java.util.ArrayList;
 public class CaseIntelligente extends Case {
     private boolean contientUneBombe ;
     private boolean estDecouverte ;
     private boolean estMarquee;
+    private List<Case> lesVoisines ;
 
     public CaseIntelligente() {
-        this.contientUneBombe = false;
-        this.estDecouverte = false;
-        this.estMarquee = false;
+        super();
+        this.lesVoisines = new ArrayList<>();
     }    
 
     public void ajouteVoisine(Case uneCase) {
-
+        lesVoisines.add(uneCase) ;
     }
 
     public int nombreBombesVoisines() {
