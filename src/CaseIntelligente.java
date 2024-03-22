@@ -33,9 +33,10 @@ public class CaseIntelligente extends Case {
         if (estMarquee) {
             return "?";
         }
-        //else
         if (contientUneBombe) {
             return "@";
         }
+        return "" + this.nombreBombesVoisines() ;
     }
 }
+
