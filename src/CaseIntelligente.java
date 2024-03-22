@@ -16,7 +16,13 @@ public class CaseIntelligente extends Case {
     }
 
     public int nombreBombesVoisines() {
-        return 0;
+        int compteur = 0;
+        for (Case laCase : lesVoisines) {
+            if(laCase.contientUneBombe()) {
+                compteur+=1;
+            }
+        }
+        return compteur;
     }
 
     @Override
