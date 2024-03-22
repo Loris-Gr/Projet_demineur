@@ -67,7 +67,12 @@ public class Plateau{
     }
 
     public void reset() {
-
+        this.nbBombes = 0;
+        for (int i=0; i < this.nbLignes; i++) {
+            for (int j=0; j < this.nbColonnes; j++){
+                this.getCase(i, j).reset();
+            }
+        }
     }
 
     protected void poseDesBombesAleatoirement(){
@@ -81,5 +86,4 @@ public class Plateau{
             }
         }
     }
-
 }
