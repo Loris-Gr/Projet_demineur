@@ -31,6 +31,9 @@ public class Demineur extends Plateau{
     }
 
     public void reset() {
+        super.reset();
+        this.gameOver = false ;
+        this.score = 0 ;
 
     }
 
