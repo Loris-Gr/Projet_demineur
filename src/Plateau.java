@@ -47,11 +47,19 @@ public class Plateau{
     }
 
     public CaseIntelligente getCase(int numLigne, int numColonne) {
-        return null;
+        return this.lePlateau.get(numLigne).get(numColonne);
     }
 
     public int getNbCasesMarquees() {
-        return 0;
+        int compteur = 0;
+        for (int i=0; i < nbLignes; i++) {
+            for (int j=0; j < nbLignes; j++){
+                if (this.getCase(i,j).estMarquee()) {
+                    compteur+=1;
+                }
+            }
+        }
+        return compteur;
     }
 
     public void poseBombe(int x, int y) {
