@@ -23,11 +23,14 @@ public class Demineur extends Plateau{
     }
 
     public boolean estGagnee() {
+        if (score == super.getNbLignes()*super.getNbColonnes() - super.getNbTotalBombes()) {
+            return true ;
+        }
         return false;
     }
 
     public boolean estPerdue() {
-        return false;
+        return this.gameOver;
     }
 
     public void reset() {
