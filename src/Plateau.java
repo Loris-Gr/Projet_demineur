@@ -63,7 +63,7 @@ public class Plateau{
     }
 
     public void poseBombe(int x, int y) {
-
+        this.getCase(x, y).poseBombe() ;
     }
 
     public void reset() {
