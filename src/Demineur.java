@@ -20,7 +20,8 @@ public class Demineur extends Plateau{
     }
 
     public void marquer(int x, int y) {
-
+        CaseIntelligente laCase = this.getCase(x,y);
+        laCase.marquer();
     }
 
     public boolean estGagnee() {
