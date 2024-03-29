@@ -13,6 +13,7 @@ public class Plateau{
         this.nbLignes = nbLignes;
         this.nbColonnes = nbColonnes;
         this.pourcentageDeBombes = pourcentage;
+        this.creerLesCasesVides();
     }
 
     private void creerLesCasesVides() {
