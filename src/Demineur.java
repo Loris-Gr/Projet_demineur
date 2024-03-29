@@ -6,7 +6,7 @@ public class Demineur extends Plateau{
 
     public Demineur(int nbLignes, int nbColonnes, int pourcentage) {
         super(nbLignes, nbColonnes, pourcentage);
-        this.gameOver = false;
+        this.gameOver = true;
         this.score = 0;
     }
 
@@ -17,6 +17,7 @@ public class Demineur extends Plateau{
     public void reveler(int x, int y) {
         CaseIntelligente laCase = this.getCase(x,y);
         laCase.reveler();
+        score+=1;
     }
 
     public void marquer(int x, int y) {
@@ -26,9 +27,10 @@ public class Demineur extends Plateau{
 
     public boolean estGagnee() {
         if (score == super.getNbLignes()*super.getNbColonnes() - super.getNbTotalBombes()) {
-            return true ;
+            this.gameOver = false;
+            return false ;
         }
-        return false;
+        return true;
     }
 
     public boolean estPerdue() {

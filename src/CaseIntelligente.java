@@ -27,13 +27,13 @@ public class CaseIntelligente extends Case {
 
     @Override
     public String toString() {
-        if (!estDecouverte && !estMarquee) {
+        if (!this.estDecouverte() && !this.estMarquee()) {
             return " ";
         }
-        if (estMarquee) {
+        if (this.estMarquee()) {
             return "?";
         }
-        if (contientUneBombe) {
+        if (this.contientUneBombe()) {
             return "@";
         }
         return "" + this.nombreBombesVoisines() ;
