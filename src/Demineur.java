@@ -19,8 +19,8 @@ public class Demineur extends Plateau{
         if (laCase.contientUneBombe()) {
             this.gameOver = true;
         }
-        laCase.reveler();
-        score+=1;
+            laCase.reveler();
+            score+=1;
     }
 
     public void marquer(int x, int y) {
@@ -30,10 +30,9 @@ public class Demineur extends Plateau{
 
     public boolean estGagnee() {
         if (score == super.getNbLignes()*super.getNbColonnes() - super.getNbTotalBombes()) {
-            this.gameOver = false;
-            return false ;
+           return true;
         }
-        return true;
+        return false;
     }
 
     public boolean estPerdue() {
