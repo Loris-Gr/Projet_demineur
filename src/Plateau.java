@@ -24,10 +24,24 @@ public class Plateau{
             }
             this.lePlateau.add(listeEnCours);
         }
+        this.rendLesCasesIntelligentes();
     }
 
     private void rendLesCasesIntelligentes() {
-        
+        for (int x = 0; x< this.nbLignes; x++) {
+            for (int y = 0; y< this.nbColonnes; y++) {
+                for (int dx=-1; dx<2; dx++) {
+                    for (int dy=-1; dy<2; dy++) {
+                        if (dx!=0 || dy!=0) {
+                            try {
+                                this.getCase(x, y).ajouteVoisine(this.getCase(x+dx, y+dy));
+                            }
+                            catch(IndexOutOfBoundsException e){}
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public int getNbLignes() {
